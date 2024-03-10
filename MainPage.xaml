@@ -8,17 +8,20 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Black">
-        <TextBox HorizontalAlignment="Left" Margin="563,10,0,0" TextWrapping="Wrap" Text="Kalkulator" VerticalAlignment="Top" FontSize="72" IsReadOnly="True" Foreground="White" Background="Black"/>
-        <TextBox HorizontalAlignment="Left" Margin="332,207,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" FontSize="48" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="624,207,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="77" Width="218" FontSize="48" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="390,0,0,0" TextWrapping="Wrap" Text="Z waluty" VerticalAlignment="Center" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="563,0,0,0" TextWrapping="Wrap" Text="-->" VerticalAlignment="Center" Foreground="White" Width="46"/>
-        <TextBox HorizontalAlignment="Left" Margin="699,0,0,0" TextWrapping="Wrap" Text="Na walute" VerticalAlignment="Center" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="332,349,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" FontSize="48" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Margin="624,349,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="48" Width="218" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="180,596,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="322" Width="365" Foreground="White" FontSize="48" />
-        <TextBlock HorizontalAlignment="Left" Margin="624,605,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="335" Width="385" Foreground="White" FontSize="48" />
+    <Grid Background="Black" Loaded="Grid_Loaded">
+        <TextBox HorizontalAlignment="Left" Margin="287,1,0,0" TextWrapping="Wrap" Text="Kalkulator" VerticalAlignment="Top" FontSize="72" IsReadOnly="True" Foreground="White" Background="Black"/>
+        <TextBox HorizontalAlignment="Left" Margin="164,190,0,0" TextWrapping="Wrap" Text="Z waluty" VerticalAlignment="Top" FontSize="48" Foreground="White" IsReadOnly="True"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="457,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="77" Width="250" FontSize="48" Foreground="White" TextChanged="textbox1_TextChanged" />
+        <TextBox HorizontalAlignment="Left" Margin="222,467,0,0" TextWrapping="Wrap" Text="Z waluty" VerticalAlignment="Top" Foreground="White" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Margin="395,467,0,0" TextWrapping="Wrap" Text="-->" VerticalAlignment="Top" Foreground="White" Width="46" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Margin="531,467,0,0" TextWrapping="Wrap" Text="Na walute" VerticalAlignment="Top" Foreground="White" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Margin="94,332,0,0" TextWrapping="Wrap" Text="Przeliczone:" VerticalAlignment="Top" FontSize="48" Foreground="White" IsReadOnly="True"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="456,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="48" Width="251" Foreground="White" IsReadOnly="True"/>
+
+        <ListBox x:Name="l1" Margin="49,603,1043,56" Background="Black" Foreground="White" FontSize="24" SelectionChanged="l1_SelectionChanged" />
+        <ListBox x:Name="l2" Margin="456,603,629,56" Background="Black" Foreground="White" FontSize="24" SelectionChanged="l2_SelectionChanged"/>
+        <ListBox x:Name="l3" Margin="960,310,100,591" Background="Black" Foreground="White" FontSize="24" Tapped="l3_Tapped_1"/>
+        <TextBox HorizontalAlignment="Left" Margin="1076,209,0,0" TextWrapping="Wrap" Text="Ostanio używane konwersje:" VerticalAlignment="Top" Height="39" Width="209"/>
 
     </Grid>
 </Page>
